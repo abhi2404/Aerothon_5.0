@@ -23,6 +23,20 @@ function Header() {
                             </ul>
                         </LinkContainer>
                     </div>
+                    <div className="navlist">
+                        <LinkContainer to='/tools'>
+                            <ul>
+                                <li >Tools</li>
+                            </ul>
+                        </LinkContainer>
+                    </div>
+                    <div className="navlist">
+                        <LinkContainer to='/tool'>
+                            <ul>
+                                <li >Add a Tool</li>
+                            </ul>
+                        </LinkContainer>
+                    </div>
                 </div>
                 <div className="headings1 ">
                     <ul>
