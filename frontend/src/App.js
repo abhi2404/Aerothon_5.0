@@ -12,6 +12,7 @@ import About from "./Screens/About";
 import Part from "./Screens/Part";
 import AddTool from "./Screens/AddTool";
 import ContactUs from "./Screens/Contact";
+import PartDetail from "./Screens/PartDetail";
 function App() {
   const [auth, setAuth] = useState(false);
 
@@ -39,6 +40,7 @@ function App() {
             <Route exact path='/about' component={() => <About />} />
             <Route exact path='/contact' component={() => <ContactUs />} />
             <Route exact path='/part' component={() => <Part />} />
+            <Route exact path='/part-detail' component={() => <PartDetail />} />
             <Route exact path='/add-tool' component={() => <AddTool />} />
 
           </Switch>

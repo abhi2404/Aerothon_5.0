@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
-  const pageNumbers = []
+  let pageNumbers = []
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i)
   }
+  pageNumbers = pageNumbers.slice(0 , 10)
 
   return (
     <>
