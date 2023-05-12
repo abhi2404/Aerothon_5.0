@@ -31,7 +31,7 @@ function Header() {
                         </LinkContainer>
                     </div>
                     <div className="navlist">
-                        <LinkContainer to='/tool'>
+                        <LinkContainer to='/add-tool'>
                             <ul>
                                 <li >Add a Tool</li>
                             </ul>
