@@ -67,9 +67,9 @@ const LoginScreen = ({ setAuth }) => {
                   </div>
                   <div className='col-lg-6 col-sm-6 titleinp'>
                     <input
-                      type='text'
-                      placeholder='Enter Email'
-                      name='email'
+                      type="email"
+                      placeholder="Enter Email"
+                      name="email"
                       value={newUser.email}
                       onChange={handleChange}
                     />
@@ -84,8 +84,8 @@ const LoginScreen = ({ setAuth }) => {
                   </div>
                   <div className='col-lg-6 col-sm-6 titleinp'>
                     <input
-                      type='text'
-                      name='password'
+                      type="password"
+                      name="password"
                       value={newUser.password}
                       placeholder='Enter Password'
                       onChange={handleChange}

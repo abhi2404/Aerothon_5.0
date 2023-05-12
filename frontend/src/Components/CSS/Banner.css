@@ -8,11 +8,12 @@
 }
 
 .textss{
-    width: 100%;
+    width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
     position: absolute;
+    flex-direction: column;
 }
 
 .bannerss img{

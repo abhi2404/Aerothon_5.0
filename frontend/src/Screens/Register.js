@@ -61,9 +61,9 @@ const RegisterScreen = () => {
                   </div>
                   <div className='col-lg-6 col-sm-6 titleinp'>
                     <input
-                      type='text'
-                      placeholder='Email'
-                      name='email'
+                      type="email"
+                      placeholder="Email"
+                      name="email"
                       value={newUser.email}
                       onChange={handleChange}
                     />
@@ -95,8 +95,8 @@ const RegisterScreen = () => {
                   </div>
                   <div className='col-lg-6 col-sm-6 titleinp'>
                     <input
-                      type='text'
-                      name='password'
+                      type="password"
+                      name="password"
                       value={newUser.password}
                       placeholder='Enter Password'
                       onChange={handleChange}

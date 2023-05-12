@@ -1,9 +1,9 @@
 import React from "react";
-import './CSS/Footer.css';
-import Facebook from '../Assets/facebook.png';
-import Instagram from '../Assets/instagram.png';
-import Pinterest from '../Assets/pinterest.png';
-import Whatsapp from '../Assets/whatsapp.png';
+import "./CSS/Footer.css";
+import Facebook from "../Assets/facebook.png";
+import Instagram from "../Assets/instagram.png";
+import Pinterest from "../Assets/pinterest.png";
+import Whatsapp from "../Assets/whatsapp.png";
 
 function Footer() {
   return (
@@ -16,10 +16,10 @@ function Footer() {
           <div className="col-lg-4 col-md-4 col-sm-12 footerb1">
             <h1> LINKS </h1>
             <ul>
-              <li>Upload Image</li>
-              <li>Image Wall</li>
-              <li>Grow Your Plant</li>
-              <li>Forest</li>
+              <li>Upload Tools</li>
+              <li>Tools Wall</li>
+              <li>Recycle Your Tool</li>
+              <li>Repurposing </li>
             </ul>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12 footerb2">
