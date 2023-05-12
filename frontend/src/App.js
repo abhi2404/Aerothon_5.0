@@ -19,6 +19,7 @@ function App() {
             <Route exact path='/' component={() => <Banner />} />
             <Route exact path='/login' component={() => <Login />} />
             <Route exact path='/register' component={() => <RegisterScreen />} />
+            <Route exact path='/tools' component={() => <ToolScreen />} />
           </Switch>
         </main>
         <footer>
