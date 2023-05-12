@@ -5,9 +5,17 @@ import Banner from "./Components/Banner";
 import Login from './Screens/Login'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RegisterScreen from "./Screens/Register";
+import { useState } from "react";
 
 
 function App() {
+
+  const [auth, setAuth] = useState(false);
+
+  const SetIsAuth = () => {
+    setAuth(true);
+  }
+
   return (
     <div className='App'>
       <Router>
@@ -17,7 +25,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path='/' component={() => <Banner />} />
-            <Route exact path='/login' component={() => <Login />} />
+            <Route exact path='/login' component={() => <Login setauth={SetIsAuth} />} />
             <Route exact path='/register' component={() => <RegisterScreen />} />
           </Switch>
         </main>

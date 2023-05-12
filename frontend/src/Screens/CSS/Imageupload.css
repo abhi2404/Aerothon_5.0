@@ -96,3 +96,19 @@
 .uploadbtn input:hover{
     background-color : rgba(93, 156, 88, 0.5);
 }
+
+
+
+.formWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(227, 243, 255);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(234, 232, 232);
+
+}
