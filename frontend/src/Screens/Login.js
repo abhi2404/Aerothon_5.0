@@ -59,7 +59,7 @@ const LoginScreen = ({ setauth }) => {
                   </div>
                   <div className="col-lg-6 col-sm-6 titleinp">
                     <input
-                      type="text"
+                      type="email"
                       placeholder="Enter Email"
                       name="email"
                       value={newUser.email}
@@ -76,7 +76,7 @@ const LoginScreen = ({ setauth }) => {
                   </div>
                   <div className="col-lg-6 col-sm-6 titleinp">
                     <input
-                      type="text"
+                      type="password"
                       name="password"
                       value={newUser.password}
                       placeholder="Enter Password"
