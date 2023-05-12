@@ -7,7 +7,7 @@ function Banner() {
   return (
     <div>
       <div className="bannerss my-5">
-        <img src={Tree} />
+        <img src={Tree} style={{ borderRadius: "20px", marginRight: "20px" }} />
         <div className="textss">
           <h1>EcoPlane</h1>
           <p
