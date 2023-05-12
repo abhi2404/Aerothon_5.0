@@ -24,16 +24,37 @@ function Header() {
                         </LinkContainer>
                     </div>
                     <div className="navlist">
-                        <LinkContainer to='/tools'>
+                        <LinkContainer to='/register'>
                             <ul>
-                                <li >Tools</li>
+                                <li >Register</li>
+                            </ul>
+                        </LinkContainer>
+                    </div>
+                    <div className="navlist">
+                        <LinkContainer to='/aeroparts'>
+                            <ul>
+                                <li >Aeroparts</li>
+                            </ul>
+                        </LinkContainer>
+                    </div>
+                    <div className="navlist">
+                        <LinkContainer to='/about'>
+                            <ul>
+                                <li >About</li>
+                            </ul>
+                        </LinkContainer>
+                    </div>
+                    <div className="navlist">
+                        <LinkContainer to='/contact'>
+                            <ul>
+                                <li >Contact Us</li>
                             </ul>
                         </LinkContainer>
                     </div>
                     <div className="navlist">
                         <LinkContainer to='/add-tool'>
                             <ul>
-                                <li >Add a Tool</li>
+                                <li >Add Tool</li>
                             </ul>
                         </LinkContainer>
                     </div>

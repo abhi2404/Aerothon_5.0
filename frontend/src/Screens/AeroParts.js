@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Card from "../Components/Card/Card";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 const Container = styled.div`
   padding-top: 30px;
   padding-bottom: 50px;
@@ -19,27 +21,32 @@ const cardData = [
   {
     img: "/assets/Fuselage.jpg",
     title: "Fuselage",
-    description: "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations."
+    description:
+      "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations.",
   },
   {
     img: "/assets/Fuselage.jpg",
     title: "Fuselage",
-    description: "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations."
+    description:
+      "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations.",
   },
   {
     img: "/assets/Fuselage.jpg",
     title: "Fuselage",
-    description: "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations."
+    description:
+      "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations.",
   },
   {
     img: "/assets/Fuselage.jpg",
     title: "Fuselage",
-    description: "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations."
+    description:
+      "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations.",
   },
   {
     img: "/assets/Fuselage.jpg",
     title: "Fuselage",
-    description: "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations."
+    description:
+      "Landing gear is a crucial aircraft component that supports and stabilizes the aircraft during takeoff and landing operations.",
   },
 ];
 const AeroParts = () => {
@@ -49,8 +56,15 @@ const AeroParts = () => {
       <Cards>
         {cardData.map((card) => {
           return (
-            <Link to={{pathname: '/part', state: {title: 'title'}}}>
-            <Card img={card.img} title={card.title}  description={card.description} />
+            <Link
+              key={card.id}
+              to={{ pathname: "/part", state: { title: card.title } }}
+            >
+              <Card
+                img={card.img}
+                title={card.title}
+                description={card.description}
+              />
             </Link>
           );
         })}
