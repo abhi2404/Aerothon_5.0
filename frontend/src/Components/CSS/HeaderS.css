@@ -22,12 +22,17 @@
     margin-bottom: 0!important;
 }
 
-
+.navItems{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
 
 .header{
-    height: 80px;
+    height: 100px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -59,7 +64,6 @@
 
 
 .navlist{
-    width: 85%;
     height: 100%;
     display: flex;
     justify-content: flex-end;

@@ -15,48 +15,49 @@ function Header() {
                             <p>EcoPlane</p>
                         </div>
                     </LinkContainer>
-
-                    <div className="navlist">
-                        <LinkContainer to='/login'>
-                            <ul>
-                                <li >Login</li>
-                            </ul>
-                        </LinkContainer>
-                    </div>
-                    <div className="navlist">
-                        <LinkContainer to='/register'>
-                            <ul>
-                                <li >Register</li>
-                            </ul>
-                        </LinkContainer>
-                    </div>
-                    <div className="navlist">
-                        <LinkContainer to='/aeroparts'>
-                            <ul>
-                                <li >Aeroparts</li>
-                            </ul>
-                        </LinkContainer>
-                    </div>
-                    <div className="navlist">
-                        <LinkContainer to='/about'>
-                            <ul>
-                                <li >About</li>
-                            </ul>
-                        </LinkContainer>
-                    </div>
-                    <div className="navlist">
-                        <LinkContainer to='/contact'>
-                            <ul>
-                                <li >Contact Us</li>
-                            </ul>
-                        </LinkContainer>
-                    </div>
-                    <div className="navlist">
-                        <LinkContainer to='/add-tool'>
-                            <ul>
-                                <li >Add Tool</li>
-                            </ul>
-                        </LinkContainer>
+                    <div className="navItems" >
+                        <div className="navlist">
+                            <LinkContainer to='/login'>
+                                <ul>
+                                    <li >Login</li>
+                                </ul>
+                            </LinkContainer>
+                        </div>
+                        <div className="navlist">
+                            <LinkContainer to='/register'>
+                                <ul>
+                                    <li >Register</li>
+                                </ul>
+                            </LinkContainer>
+                        </div>
+                        <div className="navlist">
+                            <LinkContainer to='/aeroparts'>
+                                <ul>
+                                    <li >Aeroparts</li>
+                                </ul>
+                            </LinkContainer>
+                        </div>
+                        <div className="navlist">
+                            <LinkContainer to='/about'>
+                                <ul>
+                                    <li >About</li>
+                                </ul>
+                            </LinkContainer>
+                        </div>
+                        <div className="navlist">
+                            <LinkContainer to='/contact'>
+                                <ul>
+                                    <li >Contact Us</li>
+                                </ul>
+                            </LinkContainer>
+                        </div>
+                        <div className="navlist">
+                            <LinkContainer to='/add-tool'>
+                                <ul>
+                                    <li >Add Tool</li>
+                                </ul>
+                            </LinkContainer>
+                        </div>
                     </div>
                 </div>
                 <div className="headings1 ">
