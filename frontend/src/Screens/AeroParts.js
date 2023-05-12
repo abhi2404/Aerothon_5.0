@@ -16,8 +16,9 @@ const Heading = styled.h2`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+
 `;
 const cardData = [
   {
