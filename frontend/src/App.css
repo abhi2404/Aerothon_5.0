@@ -1,3 +1,7 @@
 main{
     min-height: 500px;
 }
+a {
+    color: none;
+    text-decoration: none;
+}
