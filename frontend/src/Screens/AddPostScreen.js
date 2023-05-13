@@ -26,15 +26,15 @@ const AddPostScreen = () => {
   return (
     <>
       {isAuthenticated ? (
-        <div id='mt' className='mtt'>
-          <h3 className='my-4 text-center'>Add new Post</h3>
-          <hr className='horizontal' />
-          <Form className='w-75 m-auto text-center my-4' onSubmit={addPost}>
-            <Form.Group className='my-2' controlId='title'>
-              <Form.Label className='addtitle'>Title</Form.Label>
+        <div id="mt" className="mtt">
+          <h3 className="my-4 text-center">Add new Post</h3>
+          <hr className="horizontal" />
+          <Form className="w-75 m-auto text-center my-4" onSubmit={addPost}>
+            <Form.Group className="my-2" controlId="title">
+              <Form.Label className="addtitle">Title</Form.Label>
               <Form.Control
-                type='text'
-                placeholder='Enter Post Title'
+                type="text"
+                placeholder="Enter Post Title"
                 value={formData.title}
                 onChange={(e) =>
                   setFormData({ ...formData, title: e.target.value })
@@ -42,12 +42,12 @@ const AddPostScreen = () => {
               />
             </Form.Group>
 
-            <Form.Group className='my-2' controlId='content'>
-              <Form.Label className='addtitle'>Content</Form.Label>
+            <Form.Group className="my-2" controlId="content">
+              <Form.Label className="addtitle">Content</Form.Label>
               <Form.Control
-                as='textarea'
+                as="textarea"
                 rows={8}
-                placeholder='Enter Content'
+                placeholder="Enter Content"
                 value={formData.content}
                 onChange={(e) =>
                   setFormData({ ...formData, content: e.target.value })
@@ -55,13 +55,13 @@ const AddPostScreen = () => {
               />
             </Form.Group>
 
-            <Button variant='primary' type='submit'>
+            <Button variant="primary" type="submit">
               Submit
             </Button>
           </Form>
           {postAdded ? (
             <div>
-              <h3 className='text-center'>Post Added Successfully</h3>
+              <h3 className="text-center">Post Added Successfully</h3>
             </div>
           ) : null}
         </div>
