@@ -5,15 +5,11 @@ import { LinkContainer } from "react-router-bootstrap";
 function Header() {
   return (
     <div>
-      {/* <div className="banner">
-                <p>The Ultimate Environment Website !!!!!</p>
-            </div> */}
-
       <div className="container-fluid  header">
         <div className="heading ">
           <LinkContainer to="/">
             <div className="logo">
-              <p>EcoPlane</p>
+              <p style={{ color: "white" }}>EcoPlane</p>
             </div>
           </LinkContainer>
           <div className="navItems">

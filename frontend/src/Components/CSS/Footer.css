@@ -1,6 +1,7 @@
 .footer {
     height: 300px;
-    background-color: rgba(55, 148, 49,0.9);
+    /* background-color: rgba(55, 148, 49,0.9); */
+    background-image: linear-gradient(to right, #1e284b, #0f3653, #416342);
 }
 
 .footerb {
@@ -21,18 +22,18 @@
 .footerb1 h1 {
     width: auto;
     font-size: 2em;
-    color: black;
+    color: white;
     padding: 5px 10px;
 }
 
 .footerb1 ul li {
     font-size: 1em;
-    color: black;
+    color: white;
 }
 
 .footerb h1 {
     font-size: 2.5rem;
-    color: black;
+    color: white;
     text-transform: uppercase;
 }
 
@@ -49,13 +50,13 @@
 
 .footerb21 p {
     font-size: 1.52em;
-    color: black;
+    color: white;
 }
 
 .footerb21 h6 {
     font-size: 1em;
     letter-spacing: 1px;
-    color: black;
+    color: white;
     margin: 20px 0;
 }
 

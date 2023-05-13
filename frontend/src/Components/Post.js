@@ -14,6 +14,7 @@ const Post = ({ posts }) => {
           Individual level. Projects, Articles, DIYs or anything else is
           welcome.
         </p>
+
         <div className="Postss container my-2 ">
           {posts.map((post) => (
             <div className="my-4 mx-auto  postid container" key={post._id}>

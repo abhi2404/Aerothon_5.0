@@ -3,6 +3,7 @@ import './Card.css'
 
 
 const Card = ({ img, title, author, description }) => {
+
   return (
 
     <div className='card'>
