@@ -13,36 +13,36 @@ import Part from "./Screens/Part";
 import AddTool from "./Screens/AddTool";
 import ContactUs from "./Screens/Contact";
 import PartDetail from "./Screens/PartDetail";
+
 function App() {
   const [auth, setAuth] = useState(false);
 
   return (
-    <div className='App'>
+    <div className="App">
       <Router>
         <header>
           <Header />
         </header>
         <main>
           <Switch>
-            <Route exact path='/' component={() => <Banner />} />
+            <Route exact path="/" component={() => <Banner />} />
             <Route
               exact
-              path='/login'
+              path="/login"
               component={() => <Login setAuth={setAuth} />}
             />
             <Route
               exact
-              path='/register'
+              path="/register"
               component={() => <RegisterScreen />}
             />
-            <Route exact path='/tools' component={() => <ToolScreen />} />
-            <Route exact path='/aeroparts' component={() => <AeroParts />} />
-            <Route exact path='/about' component={() => <About />} />
-            <Route exact path='/contact' component={() => <ContactUs />} />
-            <Route exact path='/part' component={() => <Part />} />
-            <Route exact path='/part-detail' component={() => <PartDetail />} />
-            <Route exact path='/add-tool' component={() => <AddTool />} />
-
+            <Route exact path="/tools" component={() => <ToolScreen />} />
+            <Route exact path="/aeroparts" component={() => <AeroParts />} />
+            <Route exact path="/about" component={() => <About />} />
+            <Route exact path="/contact" component={() => <ContactUs />} />
+            <Route exact path="/part" component={() => <Part />} />
+            <Route exact path="/part-detail" component={() => <PartDetail />} />
+            <Route exact path="/add-tool" component={() => <AddTool />} />
           </Switch>
         </main>
         <footer>
