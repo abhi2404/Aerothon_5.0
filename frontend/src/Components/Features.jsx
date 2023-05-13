@@ -10,18 +10,18 @@ function Features() {
       <div className="line1 my-3 py-5">
         <div class="card1">
           <h1>01</h1>
-          <p>Upload Image</p>
+          <p>Aeroparts</p>
         </div>
       
 
         <div class="card1">
           <h1>02</h1>
-          <p>Image Wall</p>
+          <p>Add Tool</p>
         </div>
 
         <div class="card1">
           <h1>03</h1>
-          <p>Grow Your Plant</p>
+          <p>Recycle Your Tool</p>
         </div>
       </div>
 
@@ -29,12 +29,12 @@ function Features() {
       <div className="line1">
         <div class="card1">
           <h1>04</h1>
-          <p>AR Forest</p>
+          <p>Tools Wall</p>
         </div>
 
         <div class="card1">
           <h1>05</h1>
-          <p>Blogs !!</p>
+          <p>Repurposing</p>
         </div>
        
 

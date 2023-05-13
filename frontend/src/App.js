@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <Router>
         <header>
-          <Header />
+          <Header setAuth={setAuth} auth={auth}/>
         </header>
         <main>
           <Switch>
