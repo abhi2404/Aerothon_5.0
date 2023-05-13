@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Engine from "./Engine.jpg";
 import styled from "styled-components";
+import api_url from "../Config/Config";
+import axios from "axios";
+import { useAlert } from "react-alert";
+import { useHistory } from "react-router-dom";
 import GroupedBarChart from "../Components/GroupedBarChart";
 
 const Wrapper = styled.div`
@@ -25,7 +29,7 @@ const ImageWrapper = styled.div`
 
 const P = styled.p``;
 const Button = styled.div`
-margin-left: 30px;
+  margin-left: 30px;
   align-items: center;
   background-color: #0a66c2;
   border: 0;
@@ -66,14 +70,36 @@ margin-left: 30px;
 `;
 
 const PartDetail = () => {
+  let history = useHistory();
+  const alert = useAlert();
   const location = useLocation();
   const { post } = location.state;
-  const handleOrder = ()  => {
-    console.log(post)
-  }
+
+  const handleOrder = (e) => {
+    const formData = new FormData();
+    formData.append("id", e.id);
+    console.log(post);
+    axios
+      .post(`${api_url}api/aircrafts/buy_parts/`, formData)
+      .then((res) => {
+        if (res.status === 200 || res.status === 201) {
+          alert.success("Order Placed");
+          const token = res.data.access;
+          localStorage.setItem("token", token);
+          history.push("/");
+        } else {
+          alert.error("Some Error Occured");
+        }
+      })
+      .catch((err) => {
+        console.log(err.message);
+        alert.error(err.message);
+        console.log(err);
+      });
+  };
   return (
     <Wrapper>
-      <Button onClick={handleOrder}>Place Order</Button>
+      <Button onClick={() => handleOrder(post)}>Place Order</Button>
       <Container>
         <ImageWrapper>
           <img style={{ width: "500px" }} src={Engine} alt="Engine" />
