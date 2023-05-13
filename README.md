@@ -16,37 +16,36 @@ Getting Started - Frontend
 To get a local copy of the project up and running, follow these simple steps.
 Prerequisites
 • Install Node.js version >=14.0.0
-Installation
+### Installation
 
-1. Clone the repository.
+_Below is an example of how to install and set up the app._
 
-git clonehttps://github.com/abhi2404/ecoplane.git 2. Install NPM packages.
-
-npm install 3. Run the dev server.
-
-npm run dev
-
-Getting Started - Backend
-
-To get a local copy of the project up and running, follow these simple steps.
-Prerequisites
-• Install Python 3.8 and pip.
-Installation
-Note: This installation is for Linux. 4. Clone the repository.
-
-git clonehttps://github.com/abhi2404/fm_yoga_backend.git 5. Install virtualenv.
-
-pip install virtualenv 6. Create virtual environment using.
-
-virtualenv virtualenv_name 7. Activate your virtual environment using.
-
-sourcevirtualenv_name/bin/activate 8. Install the dependencies.
-
-pip install -r requirements.txt 9. Migrate the project.
-
-python3 manage.py migrate 10. Run the dev server.
-
-python3 manage.py runserver
-
+1. Clone the repo
+   ```sh
+   git clone https://github.com/abhi2404/Aerothon_5.0.git
+   ```
+2. Install virtual env
+   ```sh
+   pip install virtualenv
+   ```
+3. Create virtual env using 
+   ```sh
+   virtualenv virtualenv_name
+   ```
+4. Activate your virtual env using 
+   ```sh
+   source virtualenv_name/bin/activate
+   ```
+5. Now move to the project directory and run
+   ```sh
+   pip install -r  requirements.txt
+   ```
+6. Migrate your project
+   ```sh
+   python3 mange.py migrate
+   ```
+7. Run the dev server
+   ```sh
+   python3 manage.py runserver
 Contact
 For any questions or feedback, please email us at sj2394108@gmail.com.
