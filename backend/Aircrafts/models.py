@@ -1,5 +1,6 @@
+from email.policy import default
 from django.db import models
-
+from user.models import  User
 # Create your models here.
 
 class Aircraft_Part(models.Model):
@@ -32,4 +33,12 @@ class Aircraft_Part(models.Model):
     toxicity_score_difference = models.FloatField(null=True, blank=True)
     remanufacturing_potential_percent = models.FloatField(null=True, blank=True)
     life_cycle_assessment_score = models.FloatField(null=True, blank=True)
+    status=models.BooleanField(default=1)
+    added_by=models.ForeignKey(User, null=True, blank=True,default=1, on_delete=models.CASCADE)
+
+
+class Transaction(models.Model):
+    timestamp = models.DateTimeField(auto_now_add=True)
+    aircraft_part = models.ForeignKey(Aircraft_Part, on_delete=models.CASCADE)
+    buyer_id = models.ForeignKey(User, on_delete=models.CASCADE) # id of the buyer (manufacturer or recycling facility)
 
