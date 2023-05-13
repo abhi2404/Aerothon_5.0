@@ -36,8 +36,6 @@ function Features() {
           <h1>05</h1>
           <p>Repurposing</p>
         </div>
-       
-
       </div>
     </div>
   );

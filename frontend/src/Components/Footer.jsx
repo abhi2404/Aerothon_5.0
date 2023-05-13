@@ -32,7 +32,7 @@ function Footer() {
                   </form>
                 </div>
                 <div className="col-sm-4 btnbox">
-                  <p>Subscribe</p>
+                  <p className="subscribe-text">Subscribe</p>
                 </div>
               </div>
 
