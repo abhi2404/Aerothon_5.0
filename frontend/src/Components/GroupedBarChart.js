@@ -1,9 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import React from "react";
+import styled from "styled-components";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 const ChartContainer = styled.div`
-  height: 500px;
+  color: black;
+  height: 450px;
+  margin-top: 75px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: wheatwhite;
 `;
 
 const ComparisonBarChart = ({ data }) => {
@@ -24,37 +33,37 @@ const ComparisonBarChart = ({ data }) => {
 
   const chartData = [
     {
-      name: 'Energy Consumption',
-      'New Parts': energy_consumption_new_parts,
-      'Recycled Parts': energy_consumption_recycled_parts,
+      name: "Energy Consumption",
+      "New Parts": energy_consumption_new_parts,
+      "Recycled Parts": energy_consumption_recycled_parts,
     },
     {
-      name: 'Water Usage',
-      'New Parts': water_usage_new_parts,
-      'Recycled Parts': water_usage_recycled_parts,
+      name: "Water Usage",
+      "New Parts": water_usage_new_parts,
+      "Recycled Parts": water_usage_recycled_parts,
     },
     {
-      name: 'Carbon Footprint',
-      'Saved': carbon_footprint_saved,
-      'New Parts': new_parts_carbon_footprint,
-      'Recycled Parts': recycled_parts_carbon_footprint,
+      name: "Carbon Footprint",
+      Saved: carbon_footprint_saved,
+      "New Parts": new_parts_carbon_footprint,
+      "Recycled Parts": recycled_parts_carbon_footprint,
     },
     {
-      name: 'Landfill Waste',
-      'Saved': landfill_waste_saved,
-      'New Parts': landfill_waste_new_parts,
-      'Recycled Parts': landfill_waste_recycled_parts,
+      name: "Landfill Waste",
+      Saved: landfill_waste_saved,
+      "New Parts": landfill_waste_new_parts,
+      "Recycled Parts": landfill_waste_recycled_parts,
     },
     {
-      name: 'Toxicity Percentage',
-      'New Parts': toxicity_score_new_parts * 100,
-      'Recycled Parts': toxicity_score_recycled_parts * 100,
+      name: "Toxicity Percentage",
+      "New Parts": toxicity_score_new_parts * 100,
+      "Recycled Parts": toxicity_score_recycled_parts * 100,
     },
   ];
 
   return (
     <ChartContainer>
-      <BarChart width={1200} height={400} data={chartData}>
+      <BarChart width={1050} height={400} data={chartData}>
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />

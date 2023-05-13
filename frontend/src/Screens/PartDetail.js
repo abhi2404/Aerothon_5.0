@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Engine from "./Engine.jpg";
 import styled from "styled-components";
 import GroupedBarChart from "../Components/GroupedBarChart";
+
 const Wrapper = styled.div`
   padding-left: 50px;
   padding-top: 50px;
@@ -33,14 +34,34 @@ const PartDetail = () => {
     <Wrapper>
       <Container>
         <ImageWrapper>
-          <img style={{ width: "500px" }} src={Engine} alt='Engine' />
+          <img style={{ width: "500px" }} src={Engine} alt="Engine" />
         </ImageWrapper>
         <RightPart>
-          <h1>Age: {post.age}</h1>
-          <h2>Condition: {post.condition}</h2>
-          <h2>Material Composition: {post.material_composition}</h2>
-          <h2>Aircraft Model: {post.aircraft_model}</h2>
-          <h2>Name: {post.name}</h2>
+          <ol style={{ listStyleType: "square", color: "black" }}>
+            <li>
+              {" "}
+              <b>Age: </b> {post.age}
+            </li>
+            <li>
+              {" "}
+              <b>Condition:</b> {post.condition}
+            </li>
+            <li>
+              {" "}
+              <b> Material Composition:</b> {post.material_composition}
+            </li>
+            <li>
+              {" "}
+              <b>Aircraft Model:</b> {post.aircraft_model}
+            </li>
+            <li>
+              <b>Name: </b> {post.name}
+            </li>
+            <li>
+              {" "}
+              <b>location:</b> {post.location}
+            </li>
+          </ol>
         </RightPart>
       </Container>
       <GroupedBarChart data={post} />
