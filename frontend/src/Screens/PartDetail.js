@@ -67,9 +67,12 @@ margin-left: 30px;
 const PartDetail = () => {
   const location = useLocation();
   const { post } = location.state;
+  const handleOrder = ()  => {
+    console.log(post)
+  }
   return (
     <Wrapper>
-      <Button>Place Order</Button>
+      <Button onClick={handleOrder}>Place Order</Button>
       <Container>
         <ImageWrapper>
           <img style={{ width: "500px" }} src={Engine} alt='Engine' />

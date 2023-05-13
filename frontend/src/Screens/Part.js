@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useHistory } from "react-router-dom";
+import { Audio } from "react-loader-spinner";
 
 const Container = styled.div`
   padding-top: 40px;
@@ -103,6 +104,7 @@ const Part = () => {
   const [page, setPage] = useState(1);
   const [totalPosts, setTotalPosts] = useState(10);
   const [posts, setPosts] = useState([]);
+  const [isSubmit, setIsSubmit] = useState(false);
   const paginate = (pageNumber) => {
     console.log(pageNumber);
     setPage(pageNumber);
@@ -126,78 +128,95 @@ const Part = () => {
       if (res.status === 200 || res.status === 201) {
         setTotalPosts(res.data.count);
         setPosts(res.data.results);
+        setIsSubmit(true);
       } else {
         alert.show("Not Logged In");
         history.push("/");
+        setIsSubmit(true);
       }
       console.log(res);
     } catch (e) {
       alert.show("Not Logged In");
       history.push("/");
       console.log(e);
+      isSubmit(true);
     }
   }, []);
   return (
     <Container>
-      <Heading>{title}</Heading>
-      <Posts>
-        {posts.map((post, index) => {
-          return (
-            <Post>
-              <LeftWrapper>
-                <div>
-                  <P
+      {isSubmit ? (
+        <>
+          <Heading>{title}</Heading>
+          <Posts>
+            {posts.map((post, index) => {
+              return (
+                <Post>
+                  <LeftWrapper>
+                    <div>
+                      <P
+                        style={{
+                          fontSize: "30px",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Age: {post.age}
+                      </P>
+                      <P style={{ fontSize: "13px", fontWeight: "bold" }}>
+                        Aircraft Mode: {post.aircraft_model}
+                      </P>
+                      <P style={{ fontSize: "13px", fontWeight: "bold" }}>
+                        Condition: {post.condition}
+                      </P>
+                      <P style={{ fontSize: "13px", fontWeight: "bold" }}>
+                        Name: {post.name}
+                      </P>
+                      <P style={{ fontSize: "13px", fontWeight: "bold" }}>
+                        Manufacturer : {post.manufacturer}
+                      </P>
+                    </div>
+                    <RightSide>
+                      <CircularBar>
+                        <CircularProgressWithLabel
+                          value={post.remanufacturing_potential_percent}
+                        />
+                      </CircularBar>
+                      <h1 style={{ fontSize: "10px", fontWeight: "bold" }}>
+                        Remanufacturing Potential
+                      </h1>
+                    </RightSide>
+                  </LeftWrapper>
+                  <Link
+                    key={index}
+                    to={{ pathname: "/part-detail", state: { post } }}
                     style={{
-                      fontSize: "30px",
-                      fontWeight: "bold",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
-                    Age: {post.age}
-                  </P>
-                  <P style={{ fontSize: "13px", fontWeight: "bold" }}>
-                    Aircraft Mode: {post.aircraft_model}
-                  </P>
-                  <P style={{ fontSize: "13px", fontWeight: "bold" }}>
-                    Condition: {post.condition}
-                  </P>
-                  <P style={{ fontSize: "13px", fontWeight: "bold" }}>
-                    Name: {post.name}
-                  </P>
-                  <P style={{ fontSize: "13px", fontWeight: "bold" }}>
-                    Manufacturer : {post.manufacturer}
-                  </P>
-                </div>
-                <RightSide>
-                  <CircularBar>
-                    <CircularProgressWithLabel
-                      value={post.remanufacturing_potential_percent}
-                    />
-                  </CircularBar>
-                  <h1 style={{ fontSize: "10px", fontWeight: "bold" }}>
-                    Remanufacturing Potential
-                  </h1>
-                </RightSide>
-              </LeftWrapper>
-              <Link
-                key={index}
-                to={{ pathname: "/part-detail", state: { post } }}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Button>View Details</Button>{" "}
-              </Link>
-            </Post>
-          );
-        })}
-      </Posts>
-      <Pagination
-        postsPerPage={10}
-        totalPosts={totalPosts}
-        paginate={paginate}
-      />
+                    <Button>View Details</Button>{" "}
+                  </Link>
+                </Post>
+              );
+            })}
+          </Posts>
+          <Pagination
+            postsPerPage={10}
+            totalPosts={totalPosts}
+            paginate={paginate}
+          />
+        </>
+      ) : (
+        <Audio
+          height='80'
+          width='80'
+          radius='9'
+          color='green'
+          ariaLabel='loading'
+          wrapperStyle
+          wrapperClass
+        />
+      )}
     </Container>
   );
 };
