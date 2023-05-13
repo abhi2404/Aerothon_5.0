@@ -7,6 +7,7 @@ import Pagination from "../Components/Pagination";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   padding-top: 40px;
@@ -76,8 +77,6 @@ const Button = styled.div`
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    Ubuntu, sans-serif;
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
@@ -97,6 +96,7 @@ const Button = styled.div`
 `;
 
 const Part = () => {
+  let history = useHistory();
   const location = useLocation();
   const { title } = location.state;
   const alert = useAlert();
@@ -110,6 +110,11 @@ const Part = () => {
   useEffect(async () => {
     try {
       const token = localStorage.getItem("token");
+      if (!token) {
+        alert.show("Not Logged In");
+        history.push("/");
+        return;
+      }
       const res = await axios.get(
         `${api_url}api/aircrafts/get_data/?name=Engine&page=${page}`,
         {
@@ -121,9 +126,14 @@ const Part = () => {
       if (res.status === 200 || res.status === 201) {
         setTotalPosts(res.data.count);
         setPosts(res.data.results);
+      } else {
+        alert.show("Not Logged In");
+        history.push("/");
       }
       console.log(res);
     } catch (e) {
+      alert.show("Not Logged In");
+      history.push("/");
       console.log(e);
     }
   }, []);
@@ -205,8 +215,8 @@ function CircularProgressWithLabel(props) {
     >
       <CircularProgress
         style={{ color: "Green", marginBottom: "19px" }}
-        size="5rem"
-        variant="determinate"
+        size='5rem'
+        variant='determinate'
         {...props}
       />
       <div
@@ -224,9 +234,9 @@ function CircularProgressWithLabel(props) {
       >
         <h6
           style={{ fontWeight: "bold" }}
-          variant="caption"
-          component="div"
-          color="text.secondary"
+          variant='caption'
+          component='div'
+          color='text.secondary'
         >
           {`${Math.round(props.value)}%`}
         </h6>
