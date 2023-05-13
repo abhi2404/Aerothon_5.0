@@ -111,7 +111,7 @@ arduino
 Copy code
 ```sh
 https://<RANDOM_STRING>.ngrok.io
-``
+```
 Note that the random string will be different every time you start Ngrok.
 
 Copy the URL and paste it into your web browser. You should now be able to access your local web server from the internet.
